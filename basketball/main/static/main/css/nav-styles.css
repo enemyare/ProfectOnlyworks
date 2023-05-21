@@ -1,0 +1,55 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 8vh;
+    background-color: #202226;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    min-width: 40vw;
+}
+
+.brand-text h1 {
+    padding-left: 2vw;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 3vw;
+}
+
+.brand-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-logo img {
+    width: 8vh;
+    padding-left: 1vw;
+    padding-top: 0.1vh;
+}
+
+.navigation {
+    display: flex;
+    padding: 0 1vw;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 50vw;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2vw;
+}
+
+.navigation article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation article img {
+    width: 5vh;
+    padding-left: 1vw;
+}

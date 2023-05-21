@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac749862-a38d-43c5-8f1a-2d74e7d76af2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/basketball/main/static/main/css/entry-styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basketball/main/static/main/css/index-styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basketball/main/static/main/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basketball/main/static/main/img/banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basketball/main/templates/main/portfolio.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basketball/main/templates/main/profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basketball/main/templates/main/registration.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basketball/main/templates/main/sign.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basketball/main/templates/main/team.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basketball/basketball/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/basketball/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basketball/basketball/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/basketball/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basketball/main/static/main/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basketball/main/static/main/img/log.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basketball/main/static/main/img/nigga.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basketball/main/templates/main/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/main/templates/main/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basketball/main/templates/main/contacts.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basketball/main/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/main/templates/main/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basketball/main/templates/main/layout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basketball/main/templates/main/test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basketball/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/main/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basketball/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/main/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="ac749862-a38d-43c5-8f1a-2d74e7d76af2" name="Changes" comment="+front" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,6 +82,14 @@
       <option name="presentableId" value="Default" />
       <updated>1682077730475</updated>
     </task>
+    <task id="LOCAL-00001" summary="+front">
+      <created>1684671750258</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1684671750258</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -117,5 +102,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="+front" />
+    <option name="LAST_COMMIT_MESSAGE" value="+front" />
   </component>
 </project>
