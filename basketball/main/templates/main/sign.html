@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'main/css/nav-styles.css' %}">
     <link rel="stylesheet" href="{% static 'main/css/entry-styles.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/button.css' %}">
 </head>
 <body>
 <nav>
@@ -23,13 +24,13 @@
             <img src="{% static 'main/img/logo.png' %}" alt="logo">
         </article>
     </div>
-    <main class="navigation">
-        <article class="portfolio"><a href="{% url 'portfolio' %}">Портфолио</a></article>
-        <article class="team"><a href="{% url 'team' %}">Команды</a></article>
-        <article class="about"><a href="{% url 'about' %}">О проекте</a></article>
-        <article class="sign"><a href="{% url 'sign' %}">Вход</a></article>
-        <article class="registration"><a href="{% url 'registration' %}">Регистрация</a></article>
-        <article class="profile"><a href="{% url 'profile' %}">Профиль</a><img src="{% static 'main/img/user.png' %}" alt="user-image"></article>
+   <main class="navigation">
+        <article class="shine-button"><a href="{% url 'portfolio' %}">Портфолио</a></article>
+        <article class="shine-button"><a href="{% url 'team' %}">Команды</a></article>
+        <article class="shine-button"><a href="{% url 'about' %}">О проекте</a></article>
+        <article class="shine-button"><a href="{% url 'sign' %}">Вход</a></article>
+        <article class="shine-button"><a href="{% url 'registration' %}">Регистрация</a></article>
+        <article class="shine-button"><a href="{% url 'profile' %}">Профиль</a><img src="{% static 'main/img/user.png' %}" alt="user-image"></article>
     </main>
 </nav>
 <div class="entry-block-wrap">

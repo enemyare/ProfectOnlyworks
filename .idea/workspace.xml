@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac749862-a38d-43c5-8f1a-2d74e7d76af2" name="Changes" comment="+front" />
+    <list default="true" id="ac749862-a38d-43c5-8f1a-2d74e7d76af2" name="Changes" comment="+front">
+      <change afterPath="$PROJECT_DIR$/basketball/main/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basketball/main/static/main/css/button.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basketball/main/static/main/img/login.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basketball/main/token.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basketball/basketball/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/basketball/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basketball/basketball/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/basketball/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basketball/catalog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/catalog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basketball/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basketball/main/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/main/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basketball/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/main/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basketball/main/templates/main/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/main/templates/main/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basketball/main/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/main/templates/main/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basketball/main/templates/main/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/main/templates/main/portfolio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basketball/main/templates/main/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/main/templates/main/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basketball/main/templates/main/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/main/templates/main/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basketball/main/templates/main/sign.html" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/main/templates/main/sign.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basketball/main/templates/main/team.html" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/main/templates/main/team.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basketball/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/main/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +33,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -44,10 +64,10 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\enemyare\Desktop\PROJECT\onlywork\basketball\main\static\main" />
-      <recent name="C:\Users\enemyare\Desktop\PROJECT\onlywork\basketball\main\static" />
       <recent name="C:\Users\enemyare\Desktop\PROJECT\onlywork\basketball\main\static\main\css" />
-      <recent name="C:\Users\enemyare\Desktop\PROJECT\onlywork\basketball\main\static\main\img" />
       <recent name="C:\Users\enemyare\Desktop\PROJECT\onlywork\basketball\main\templates\main" />
+      <recent name="C:\Users\enemyare\Desktop\PROJECT\onlywork\basketball\main\templates" />
+      <recent name="C:\Users\enemyare\Desktop\PROJECT\onlywork\basketball\main\static\main\img" />
     </key>
   </component>
   <component name="RunManager">
@@ -96,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684671885262</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="+front">
+      <created>1684672132908</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684672132908</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

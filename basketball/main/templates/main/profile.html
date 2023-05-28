@@ -11,6 +11,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'main/css/nav-styles.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/button.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/profile-styles.css' %}">
 </head>
 <body>
 <nav>
@@ -31,6 +33,56 @@
         <article class="shine-button"><a href="{% url 'profile' %}">Профиль</a><img src="{% static 'main/img/user.png' %}" alt="user-image"></article>
     </main>
 </nav>
+    <div class="entry-block-wrap">
+        <section class="entry-block">
+            <aside class="links">
+                <h1>Профиль</h1>
+            </aside>
+            <main class="main">
+                <aside class="head">
+                    <img src="{% static 'main/img/login.png' %}" alt="user banner">
+                    <h1>Логин</h1>
+                </aside>
+                <hr>
+                <div class="block">
+                    <aside class="links">
+                        <a href="{% url 'profile' %}" class="active">Портфолио</a>
+                        <a href="{% url 'team' %}">Команды</a>
+                    </aside>
+                    <main class="lines">
+                        <div class="left">
+                            <div class="input">
+                                <label class="enter-text" for="last-name">Фамилия:</label>
+                                <input class="enter" type="text" id="last-name">
+                            </div>
+                            <div class="input">
+                                <label class="enter-text" for="name">Имя:</label>
+                                <input class="enter" type="text" id="name">
+                            </div>
+                            <div class="input">
+                                <label class="enter-text" for="family-name">Отчество:</label>
+                                <input class="enter" type="text" id="family-name">
+                            </div>
+                            <div class="input">
+                                <label class="enter-text" for="age">Возраст:</label>
+                                <input class="enter" type="text" id="age">
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="input pos">
+                                <label class="enter-text" for="position">Позиция:</label>
+                                <input class="enter" type="text" id="position">
+                            </div>
+                            <div class="input">
+                                <label class="enter-text" for="about">О себе:</label>
+                                <textarea class="enter" style="height: 18vw;" id="about"></textarea>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </main>
+        </section>
+    </div>
 
 </body>
 </html>
