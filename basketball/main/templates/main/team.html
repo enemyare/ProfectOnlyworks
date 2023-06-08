@@ -11,7 +11,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'main/css/nav-styles.css' %}">
-    <link rel="stylesheet" href="{% static 'main/css/button.css' %}">
     <link rel="stylesheet" href="{% static 'main/css/profile-styles.css' %}">
 </head>
 <body>
@@ -28,6 +27,7 @@
         <article class="shine-button"><a href="{% url 'team' %}">Команды</a></article>
         <article class="shine-button"><a href="{% url 'sign' %}">Вход</a></article>
         <article class="shine-button"><a href="{% url 'registration' %}">Регистрация</a></article>
+        <article class="my-team"><a href="{% url 'myteam' %}">Моя команда</a></article>
         <article class="shine-button"><a href="{% url 'profile' %}">Профиль</a><img src="{% static 'main/img/user.png' %}" alt="user-image"></article>
     </main>
 </nav>
@@ -38,7 +38,7 @@
         </aside>
         <main class="main">
             <aside class="head">
-                <img src="{% static 'main/img/login.png' %}" alt="user banner">
+                <img src="{% static 'main/img/logoin.png' %}" alt="user banner">
                 <h1>Логин</h1>
             </aside>
             <hr>
@@ -46,6 +46,7 @@
                 <aside class="links">
                     <a href="profile.html">Портфолио</a>
                     <a href="team.html" class="active">Команды</a>
+                    <a href="myteam.html">Моя команда</a>
                 </aside>
                 <main class="team">
                     <header>
@@ -112,6 +113,7 @@
                             </datalist>
                         </div>
                     </div>
+                    <a class="start" href="#" style="margin: 5vw 30vw">Вступить</a>
                 </main>
                 <a href="#" class="new">+ Новая команда</a>
             </div>

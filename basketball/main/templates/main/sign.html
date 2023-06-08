@@ -11,8 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'main/css/nav-styles.css' %}">
-    <link rel="stylesheet" href="{% static 'main/css/entry-styles.css' %}">
-    <link rel="stylesheet" href="{% static 'main/css/button.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/profile-styles.css' %}">
 </head>
 <body>
 <nav>
@@ -24,10 +23,11 @@
             <img src="{% static 'main/img/logo.png' %}" alt="logo">
         </article>
     </div>
-   <main class="navigation">
+    <main class="navigation">
         <article class="shine-button"><a href="{% url 'team' %}">Команды</a></article>
         <article class="shine-button"><a href="{% url 'sign' %}">Вход</a></article>
         <article class="shine-button"><a href="{% url 'registration' %}">Регистрация</a></article>
+        <article class="my-team"><a href="{% url 'myteam' %}">Моя команда</a></article>
         <article class="shine-button"><a href="{% url 'profile' %}">Профиль</a><img src="{% static 'main/img/user.png' %}" alt="user-image"></article>
     </main>
 </nav>
@@ -37,8 +37,7 @@
             <a href="{% url 'sign' %}" class="active">Вход</a>
             <a href="{% url 'registration' %}">Регистрация</a>
         </aside>
-        <form method="post" class="main">
-            {% csrf_token %}
+        <main class="main">
             <div class="login input">
                 <label class="enter-text" for="login">Логин или E-mail:</label>
                 <input class="enter" type="text" id="login" required minlength="4" maxlength="8" size="10">
@@ -48,8 +47,8 @@
                 <input class="enter" type="password" id="pass" required minlength="4" maxlength="8" size="10">
             </div>
 
-            <a class="start" href="{% url 'profile' %}">Войти</a>
-        </form>
+            <a class="start" href="{% url 'registration' %}">Войти</a>
+        </main>
     </section>
 </div>
 </body>

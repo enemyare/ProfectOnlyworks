@@ -11,9 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'main/css/nav-styles.css' %}">
-    <link rel="stylesheet" href="{% static 'main/css/entry-styles.css' %}">
-    <link rel="stylesheet" href="{% static 'main/css/button.css' %}">
-    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/profile-styles.css' %}">
 </head>
 <body>
 <nav>
@@ -29,6 +27,7 @@
         <article class="shine-button"><a href="{% url 'team' %}">Команды</a></article>
         <article class="shine-button"><a href="{% url 'sign' %}">Вход</a></article>
         <article class="shine-button"><a href="{% url 'registration' %}">Регистрация</a></article>
+        <article class="my-team"><a href="{% url 'myteam' %}">Моя команда</a></article>
         <article class="shine-button"><a href="{% url 'profile' %}">Профиль</a><img src="{% static 'main/img/user.png' %}" alt="user-image"></article>
     </main>
 </nav>
@@ -38,50 +37,26 @@
             <a href="{% url 'sign' %}">Вход</a>
             <a href="{% url 'registration' %}" class="active">Регистрация</a>
         </aside>
-        <form action="{% url 'main:registration' %}" method="post" class="main">
-            {% csrf_token %}
-<!--            {% for message in messages %}-->
-<!--                <p>{{ message }}</p>-->
-<!--             {% endfor %}-->
+        <main class="main">
             <div class="login input">
-                <label class="enter-text" for="inputEmailAddress">E-mail</label>
-                <input class="form-control py-4" id="inputEmailAddress" type="email"
-                                               placeholder="Введите email"/>
+                <label class="enter-text" for="login">Логин:</label>
+                <input class="enter" type="text" id="login" required minlength="4" maxlength="8" size="10">
             </div>
-             <div class="login input">
-                <label class="enter-text" for="login">Имя пользователя</label>
-                <input class="form-control py-4" id="login" type="text"
-                                               placeholder="Введите имя"/>
+            <div class="email input">
+                <label class="enter-text" for="email">E-mail:</label>
+                <input class="enter" type="text" id="email" required minlength="4" maxlength="8" size="10">
             </div>
-             <div class="login input">
-                <label class="enter-text" for="pass">Пароль</label>
-                <input class="form-control py-4" id="pass" type="password"
-                                               placeholder="Введите пароль"/>
+            <div class="pass input">
+                <label class="enter-text" for="pass">Пароль:</label>
+                <input class="enter" type="password" id="pass" required minlength="4" maxlength="8" size="10">
             </div>
-             <div class="login input">
-                <label class="enter-text" for="pass-rep">Повторите пароль</label>
-                <input class="form-control py-4" id="pass-rep" type="password"
-                                               placeholder="Повторите пароль"/>
+            <div class="pass-rep input">
+                <label class="enter-text" for="pass-rep">Повторите пароль:</label>
+                <input class="enter" type="password" id="pass-rep" required minlength="4" maxlength="8" size="10">
             </div>
-            <button type="submit" value="Register Account" class="form-group start">Зарегистрироваться</button>
 
-<!--            <div class="login input">-->
-<!--                <label class="enter-text" for="login">Логин:</label>-->
-<!--                <input class="enter" type="text" id="login" required minlength="4" maxlength="8" size="10">-->
-<!--            </div>-->
-<!--            <div class="email input">-->
-<!--                <label class="enter-text" for="email">E-mail:</label>-->
-<!--                <input class="enter" type="text" id="email" required minlength="4" maxlength="8" size="10">-->
-<!--            </div>-->
-<!--            <div class="pass input">-->
-<!--                <label class="enter-text" for="pass">Пароль:</label>-->
-<!--                <input class="enter" type="password" id="pass" required minlength="4" maxlength="8" size="10">-->
-<!--            </div>-->
-<!--            <div class="pass-rep input">-->
-<!--                <label class="enter-text" for="pass-rep">Повторите пароль:</label>-->
-<!--                <input class="enter" type="password" id="pass-rep" required minlength="4" maxlength="8" size="10">-->
-<!--            </div>-->
-        </form>
+            <a class="start" href="{% url 'registration' %}">Зарегестрироваться</a>
+        </main>
     </section>
 </div>
 </body>
