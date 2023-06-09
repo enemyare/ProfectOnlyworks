@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>SlamDunkPortfolios</title>
-    <link rel="icon" href="">
+    <link rel="icon" href="{% static 'main/img/logo.png' %}">
     <meta name="author" content="Timur Distel">
     <meta name="keywords" content="SDP">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,9 +26,7 @@
         </article>
     </div>
     <main class="navigation">
-        <article class="shine-button"><a href="{% url 'portfolio' %}">Портфолио</a></article>
         <article class="shine-button"><a href="{% url 'team' %}">Команды</a></article>
-        <article class="shine-button"><a href="{% url 'about' %}">О проекте</a></article>
         <article class="shine-button"><a href="{% url 'sign' %}">Вход</a></article>
         <article class="shine-button"><a href="{% url 'registration' %}">Регистрация</a></article>
         <article class="shine-button"><a href="{% url 'profile' %}">Профиль</a><img src="{% static 'main/img/user.png' %}" alt="user-image"></article>
@@ -40,32 +38,32 @@
             <a href="{% url 'sign' %}">Вход</a>
             <a href="{% url 'registration' %}" class="active">Регистрация</a>
         </aside>
-        <form action="{% url 'main:registration' %}" method="post" class="main">
+        <form  class="main" action="{% url 'registration' %}" method="post">
             {% csrf_token %}
 <!--            {% for message in messages %}-->
 <!--                <p>{{ message }}</p>-->
 <!--             {% endfor %}-->
             <div class="login input">
                 <label class="enter-text" for="inputEmailAddress">E-mail</label>
-                <input class="form-control py-4" id="inputEmailAddress" type="email"
+                <input class="form-control" id="inputEmailAddress" type="email"
                                                placeholder="Введите email"/>
             </div>
              <div class="login input">
                 <label class="enter-text" for="login">Имя пользователя</label>
-                <input class="form-control py-4" id="login" type="text"
+                <input class="form-control" id="login" type="text"
                                                placeholder="Введите имя"/>
             </div>
              <div class="login input">
                 <label class="enter-text" for="pass">Пароль</label>
-                <input class="form-control py-4" id="pass" type="password"
+                <input class="form-control" id="pass" type="password"
                                                placeholder="Введите пароль"/>
             </div>
              <div class="login input">
                 <label class="enter-text" for="pass-rep">Повторите пароль</label>
-                <input class="form-control py-4" id="pass-rep" type="password"
+                <input class="form-control" id="pass-rep" type="password"
                                                placeholder="Повторите пароль"/>
             </div>
-            <button type="submit" value="Register Account" class="form-group start">Зарегистрироваться</button>
+            <button type="submit"  class="form-group start">Зарегистрироваться</button>
 
 <!--            <div class="login input">-->
 <!--                <label class="enter-text" for="login">Логин:</label>-->

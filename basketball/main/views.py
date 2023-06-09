@@ -16,19 +16,16 @@ def profile(request):
     return render(request, 'main/profile.html')
 
 def registration(request):
-    form = UserRegisterForm()
-    context = {'form': form}
-    # if request.method == 'POST':
-    #     form = UserRegisterForm(request.POST)
-    #     if form.is_valid():
-    #         form.save()
-    #         messages.success(request, 'Вы успешно зарегестрировались')
-    #         return redirect('sign')
-    #     else:
-    #         messages.error(request, 'ошибка регистрации')
-    # else:
-    #     form = UserRegisterForm()
-    return render(request, 'main/registration.html', context)
+    if request.method == 'POST':
+        form = UserRegisterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('sign')
+        else:
+            messages.error(request, 'ошибка регистрации')
+    else:
+        form = UserRegisterForm()
+    return render(request, 'main/registration.html', {"form": form})
 def sign(request):
     return render(request, 'main/sign.html')
 def team(request):

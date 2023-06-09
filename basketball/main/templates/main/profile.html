@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>SlamDunkPortfolios</title>
-    <link rel="icon" href="">
+    <link rel="icon" href="{% static 'main/img/logo.png' %}">
     <meta name="author" content="Timur Distel">
     <meta name="keywords" content="SDP">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,9 +25,7 @@
         </article>
     </div>
     <main class="navigation">
-        <article class="shine-button"><a href="{% url 'portfolio' %}">Портфолио</a></article>
         <article class="shine-button"><a href="{% url 'team' %}">Команды</a></article>
-        <article class="shine-button"><a href="{% url 'about' %}">О проекте</a></article>
         <article class="shine-button"><a href="{% url 'sign' %}">Вход</a></article>
         <article class="shine-button"><a href="{% url 'registration' %}">Регистрация</a></article>
         <article class="shine-button"><a href="{% url 'profile' %}">Профиль</a><img src="{% static 'main/img/user.png' %}" alt="user-image"></article>
@@ -79,6 +77,7 @@
                             </div>
                         </div>
                     </main>
+                    <a class="start" href="#">Сохранить</a>
                 </div>
             </main>
         </section>

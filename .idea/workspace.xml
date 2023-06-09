@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac749862-a38d-43c5-8f1a-2d74e7d76af2" name="Changes" comment="+front">
-      <change afterPath="$PROJECT_DIR$/basketball/main/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basketball/main/static/main/css/button.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basketball/main/static/main/img/login.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basketball/main/token.py" afterDir="false" />
+    <list default="true" id="ac749862-a38d-43c5-8f1a-2d74e7d76af2" name="Changes" comment="make form">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basketball/basketball/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/basketball/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basketball/basketball/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/basketball/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basketball/catalog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/catalog/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basketball/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basketball/main/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/main/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basketball/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/main/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basketball/main/templates/main/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/main/templates/main/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basketball/main/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/main/templates/main/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basketball/main/templates/main/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/main/templates/main/portfolio.html" afterDir="false" />
@@ -23,6 +14,7 @@
       <change beforePath="$PROJECT_DIR$/basketball/main/templates/main/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/main/templates/main/registration.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basketball/main/templates/main/sign.html" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/main/templates/main/sign.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basketball/main/templates/main/team.html" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/main/templates/main/team.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basketball/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/main/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basketball/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/basketball/main/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,25 +41,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/enemyare/Desktop/PROJECT/onlywork/basketball/main/static/main/img&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/enemyare/Desktop/PROJECT/onlywork/basketball/main/static",
+    "run.code.analysis.last.selected.profile": "aDefault",
+    "settings.editor.selected.configurable": "preferences.editor"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\enemyare\Desktop\PROJECT\onlywork\basketball\main\static" />
       <recent name="C:\Users\enemyare\Desktop\PROJECT\onlywork\basketball\main\static\main\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\enemyare\Desktop\PROJECT\onlywork\basketball\main\static\main\img" />
       <recent name="C:\Users\enemyare\Desktop\PROJECT\onlywork\basketball\main\static\main" />
       <recent name="C:\Users\enemyare\Desktop\PROJECT\onlywork\basketball\main\static\main\css" />
       <recent name="C:\Users\enemyare\Desktop\PROJECT\onlywork\basketball\main\templates\main" />
       <recent name="C:\Users\enemyare\Desktop\PROJECT\onlywork\basketball\main\templates" />
-      <recent name="C:\Users\enemyare\Desktop\PROJECT\onlywork\basketball\main\static\main\img" />
     </key>
   </component>
   <component name="RunManager">
@@ -123,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684672132908</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="make form">
+      <created>1685276169837</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685276169837</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -139,6 +140,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="+front" />
-    <option name="LAST_COMMIT_MESSAGE" value="+front" />
+    <MESSAGE value="make form" />
+    <option name="LAST_COMMIT_MESSAGE" value="make form" />
   </component>
 </project>
