@@ -26,29 +26,38 @@
     </div>
     <main class="navigation">
         <article class="shine-button"><a href="{% url 'team' %}">Команды</a></article>
+        <article class="shine-button"><a href="{% url 'myteam' %}">Моя команда</a></article>
         <article class="shine-button"><a href="{% url 'sign' %}">Вход</a></article>
         <article class="shine-button"><a href="{% url 'registration' %}">Регистрация</a></article>
-        <article class="shine-button"><a href="{% url 'profile' %}">Профиль</a><img src="{% static 'main/img/user.png' %}" alt="user-image"></article>
+        <article class="shine-button"><a href="{% url 'profile' %}">Портфолио</a><img src="{% static 'main/img/user.png' %}" alt="user-image"></article>
     </main>
 </nav>
+
 <div class="entry-block-wrap">
+
     <section class="entry-block">
         <aside class="links">
             <a href="{% url 'sign' %}" class="active">Вход</a>
             <a href="{% url 'registration' %}">Регистрация</a>
         </aside>
-        <form method="post" class="main">
+
+        <form method="post" action="{% url 'sign' %}" class="main">
             {% csrf_token %}
+
             <div class="login input">
-                <label class="enter-text" for="login">Логин или E-mail:</label>
-                <input class="form-control" type="text" id="login" required minlength="4" maxlength="8" size="10">
+                <label class="enter-text" for="id_username">Логин</label>
+                <input class="enter" type="text" id="id_username"   name="username" required>
             </div>
             <div class="pass input">
-                <label class="enter-text" for="password">Пароль:</label>
-                <input class="form-control" type="password" id="password" required minlength="4" maxlength="8" size="10">
+                <label class="enter-text" for="id_password">Пароль:</label>
+                <input class="enter" type="password" id="id_password"   name="password" required>
             </div>
-
-            <a class="start" href="{% url 'profile' %}">Войти</a>
+            {% for error in login_form.non_field_errors %}
+             <div class="input" >
+                <h2 class="enter-text"> {{ error }} </h2>
+            </div>
+            {% endfor %}
+            <button type="submit"  class="start">Войти</button>
         </form>
     </section>
 </div>

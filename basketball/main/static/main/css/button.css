@@ -9,7 +9,7 @@
   border-radius: 8px;
   font-family: 'Montserrat', sans-serif;
   color: #fe6637;
-  transition: .2s ease-in-out;
+  transition: .1s ease-in-out;
 }
 .shine-button:before {
   content: "";
@@ -24,8 +24,4 @@
 .shine-button:hover {
   background: #fe6637;
   color: #fff;
-}
-.shine-button:hover:before {
-  left: 150px;
-  transition: .5s ease-in-out;
 }

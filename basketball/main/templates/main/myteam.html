@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SlamDunkPortfolios</title>
+  <link rel="icon" href="{% static 'main/img/logo.png' %}">
+  <meta name="author" content="Timur Distel">
+  <meta name="keywords" content="SDP">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'main/css/nav-styles.css' %}">
+  <link rel="stylesheet" href="{% static 'main/css/profile-styles.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/button.css' %}">
+</head>
+<body>
+<nav>
+  <div class="brand">
+    <article class="brand-text">
+      <h1>SlamDunkPortfolios</h1>
+    </article>
+    <article class="brand-logo">
+      <img src="{% static 'main/img/logo.png' %}" alt="logo">
+    </article>
+  </div>
+    <main class="navigation">
+        <article class="shine-button"><a href="{% url 'team' %}">Команды</a></article>
+        <article class="shine-button"><a href="{% url 'myteam' %}">Моя команда</a></article>
+        <article class="shine-button"><a href="{% url 'sign' %}">Вход</a></article>
+        <article class="shine-button"><a href="{% url 'registration' %}">Регистрация</a></article>
+        <article class="shine-button"><a href="{% url 'profile' %}">Портфолио</a><img src="{% static 'main/img/user.png' %}" alt="user-image"></article>
+    </main>
+</nav>
+<div class="entry-block-wrap">
+  <section class="entry-block">
+    <aside class="links">
+      <h1>Профиль</h1>
+    </aside>
+    <main class="main">
+      <aside class="head">
+        <img src="{% static 'main/img/login.png' %}" alt="user banner">
+        <h1>Логин</h1>
+      </aside>
+      <hr>
+      <div class="block">
+        <aside class="links">
+          <a href="{% url 'profile' %}">Портфолио</a>
+          <a href="{% url 'team' %}">Команды</a>
+          <a href="{% url 'myteam' %}" class="active">Моя команда</a>
+        </aside>
+        <main class="team">
+          <header>
+            <img src="{% static 'main/img/my-team.png' %}" alt="team logo">
+            <div class="team-name">
+              <p>Моя команда</p>
+              <h1>Члены команды:</h1>
+            </div>
+          </header>
+          <div class="stuff">
+            <div class="input pos">
+              <label class="enter-text" for="position1">Игрок1:</label>
+              <input class="enter" list="pos1" type="text" id="position1">
+              <datalist id="pos1">
+                <option value="1" label="1">
+                <option value="2" label="2">
+                <option value="3" label="3">
+                <option value="4" label="4">
+                <option value="5" label="5">
+              </datalist>
+            </div>
+            <div class="input pos">
+              <label class="enter-text" for="position2">Игрок2:</label>
+              <input class="enter" list="pos2" type="text" id="position2">
+              <datalist id="pos2">
+                <option value="1" label="1">
+                <option value="2" label="2">
+                <option value="3" label="3">
+                <option value="4" label="4">
+                <option value="5" label="5">
+              </datalist>
+            </div>
+            <div class="input pos">
+              <label class="enter-text" for="position3">Игрок3:</label>
+              <input class="enter" list="pos3" type="text" id="position3">
+              <datalist id="pos3">
+                <option value="1" label="1">
+                <option value="2" label="2">
+                <option value="3" label="3">
+                <option value="4" label="4">
+                <option value="5" label="5">
+              </datalist>
+            </div>
+            <div class="input pos">
+              <label class="enter-text" for="position4">Игрок4:</label>
+              <input class="enter" list="pos4" type="text" id="position4">
+              <datalist id="pos4">
+                <option value="1" label="1">
+                <option value="2" label="2">
+                <option value="3" label="3">
+                <option value="4" label="4">
+                <option value="5" label="5">
+              </datalist>
+            </div>
+            <div class="input pos">
+              <label class="enter-text" for="position5">Игрок5:</label>
+              <input class="enter" list="pos5" type="text" id="position5">
+              <datalist id="pos5">
+                <option value="1" label="1">
+                <option value="2" label="2">
+                <option value="3" label="3">
+                <option value="4" label="4">
+                <option value="5" label="5">
+              </datalist>
+            </div>
+          </div>
+          <a class="start" href="#" style="margin: 5vw 30vw">Сохранить</a>
+        </main>
+      </div>
+    </main>
+  </section>
+</div>
+</body>
+</html>
