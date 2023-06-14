@@ -24,7 +24,7 @@
         </article>
     </div>
     <main class="navigation">
-        <article class="shine-button"><a href="{% url 'team' %}">Команды</a></article>
+        <article class="shine-button"><a href="{% url 'team' %}">Игроки</a></article>
         <article class="shine-button"><a href="{% url 'sign' %}">Вход</a></article>
         <article class="shine-button"><a href="{% url 'registration' %}">Регистрация</a></article>
         <article class="my-team"><a href="{% url 'myteam' %}">Моя команда</a></article>
@@ -44,78 +44,50 @@
             <hr>
             <div class="block">
                 <aside class="links">
-                    <a href="profile.html">Портфолио</a>
-                    <a href="team.html" class="active">Команды</a>
-                    <a href="myteam.html">Моя команда</a>
+                    <a href="{% url 'profile' %}">Портфолио</a>
+                    <a href="{% url 'team' %}" class="active">Игроки</a>
+                    <a href="{% url 'myteam' %}">Моя команда</a>
                 </aside>
                 <main class="team">
                     <header>
                         <img src="{% static 'main/img/team.png' %}" alt="team logo">
                         <div class="team-name">
-                            <p>Название</p>
-                            <h1>Члены команды:</h1>
+                            <p>Фамилия И. О.</p>
+                            <a style="margin: 0" class="start" href="#">Пригласить</a>
                         </div>
                     </header>
-                    <div class="stuff">
-                        <div class="input pos">
-                            <label class="enter-text" for="position1">Ссылка1:</label>
-                            <input class="enter" list="pos1" type="text" id="position1">
-                            <datalist id="pos1">
-                                <option value="1" label="1">
-                                <option value="2" label="2">
-                                <option value="3" label="3">
-                                <option value="4" label="4">
-                                <option value="5" label="5">
-                            </datalist>
+                    <main class="lines">
+                        <div class="left">
+                            <div class="input">
+                                <label class="enter-text" for="last-name">ФИО:</label>
+                                <input readonly class="enter" type="text" id="last-name">
+                            </div>
+                            <div class="age-pos">
+                                <div class="input age">
+                                    <label class="enter-text" for="age">Возраст:</label>
+                                    <input readonly class="enter" type="text" id="age">
+                                </div>
+                                <div class="input pos">
+                                    <label class="enter-text" for="position">Позиция:</label>
+                                    <input readonly class="enter" list="pos" type="text" id="position">
+                                    <datalist id="pos">
+                                        <option value="1" label="1">
+                                        <option value="2" label="2">
+                                        <option value="3" label="3">
+                                        <option value="4" label="4">
+                                        <option value="5" label="5">
+                                    </datalist>
+                                </div>
+                            </div>
                         </div>
-                        <div class="input pos">
-                            <label class="enter-text" for="position2">Ссылка2:</label>
-                            <input class="enter" list="pos2" type="text" id="position2">
-                            <datalist id="pos2">
-                                <option value="1" label="1">
-                                <option value="2" label="2">
-                                <option value="3" label="3">
-                                <option value="4" label="4">
-                                <option value="5" label="5">
-                            </datalist>
+                        <div class="right">
+                            <div class="input">
+                                <label class="enter-text" for="about">О себе:</label>
+                                <textarea readonly class="enter" style="height: 10vw;" id="about"></textarea>
+                            </div>
                         </div>
-                        <div class="input pos">
-                            <label class="enter-text" for="position3">Ссылка3:</label>
-                            <input class="enter" list="pos3" type="text" id="position3">
-                            <datalist id="pos3">
-                                <option value="1" label="1">
-                                <option value="2" label="2">
-                                <option value="3" label="3">
-                                <option value="4" label="4">
-                                <option value="5" label="5">
-                            </datalist>
-                        </div>
-                        <div class="input pos">
-                            <label class="enter-text" for="position4">Ссылка4:</label>
-                            <input class="enter" list="pos4" type="text" id="position4">
-                            <datalist id="pos4">
-                                <option value="1" label="1">
-                                <option value="2" label="2">
-                                <option value="3" label="3">
-                                <option value="4" label="4">
-                                <option value="5" label="5">
-                            </datalist>
-                        </div>
-                        <div class="input pos">
-                            <label class="enter-text" for="position5">Ссылка5:</label>
-                            <input class="enter" list="pos5" type="text" id="position5">
-                            <datalist id="pos5">
-                                <option value="1" label="1">
-                                <option value="2" label="2">
-                                <option value="3" label="3">
-                                <option value="4" label="4">
-                                <option value="5" label="5">
-                            </datalist>
-                        </div>
-                    </div>
-                    <a class="start" href="#" style="margin: 5vw 30vw">Вступить</a>
+                    </main>
                 </main>
-                <a href="#" class="new">+ Новая команда</a>
             </div>
         </main>
     </section>

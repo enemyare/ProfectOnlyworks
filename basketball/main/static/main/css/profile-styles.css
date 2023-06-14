@@ -22,6 +22,23 @@
     align-items: center;
 }
 
+.age {
+    max-width: 10vw;
+}
+
+.age-pos {
+    display: flex;
+    justify-content: space-between;
+    max-width: 25vw;
+}
+
+.media {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .head h1 {
     margin-left: 2vw;
     font-size: 2.5vw;
@@ -171,4 +188,9 @@ hr {
     color: black;
     background-color: #c59494;
     margin: 2vw 20vw;
+}
+
+.media h1 {
+    margin-left: 0;
+    margin-bottom: 2vw;
 }
