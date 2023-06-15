@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SlamDunkPortfolios</title>
+  <link rel="icon" href="{% static 'main/img/logo.png' %}">
+  <meta name="author" content="Timur Distel">
+  <meta name="keywords" content="SDP">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'main/css/nav-styles.css' %}">
+  <link rel="stylesheet" href="{% static 'main/css/profile-styles.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/button.css' %}">
+</head>
+<body>
+<nav>
+  <div class="brand">
+    <article class="brand-text">
+      <h1>SlamDunkPortfolios</h1>
+    </article>
+    <article class="brand-logo">
+      <img src="{% static 'main/img/logo.png' %}" alt="logo">
+    </article>
+  </div>
+    <main class="navigation">
+        <article class="shine-button"><a href="{% url 'team' %}">Игроки</a></article>
+
+        {% if user.is_authenticated %}
+        <article class="shine-button"><a href="{% url 'myteam' request.user.username %}">Моя команда</a></article>
+        <article class="shine-button"><a href="{% url 'profile' request.user.username %}">Портфолио</a><img src="{% static 'main/img/user.png' %}" alt="user-image"></article>
+        <article class="shine-button"><a href="{% url 'logout' %}">Выйти</a></article>
+        {% else %}
+        <article class="shine-button"><a href="{% url 'sign' %}">Вход</a></article>
+        <article class="shine-button"><a href="{% url 'registration' %}">Регистрация</a></article>
+        {% endif %}
+    </main>
+</nav>
+<div class="entry-block-wrap">
+  <section class="entry-block">
+    <aside class="links">
+      <h1>Профиль</h1>
+    </aside>
+    <main class="main">
+      <div class="block">
+        <main class="team">
+          <form class= 'imageform' method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input class="edit-button" style="position: relative; left: 62px;"  name="image" id="avatar" type="file" accept="image/*">
+                <label for="image" id="avatar-btn"> </label>
+                <button class="edit-button" style="position: relative; top: 30px; right: 195px;" id="image" type="submit" name="image-file">Сохранить файл</button>
+          </form>
+        <form class="" method="POST">
+          {% csrf_token %}
+            <header>
+              <img src="{{ myteamprofile.image.url }}" alt="team logo">
+
+              <div class="team-name">
+                <label class="enter-text" for="last-name">Название команды:</label>
+                <input class="enter" type="text" name="nameteam" id="last-name" value="{{ myteamprofile.nameteam }}">
+
+                <h1>Игроки:</h1>
+              </div>
+            </header>
+            <div class="stuff">
+              <div class="input pos">
+                <label class="enter-text"  >Игрок1:</label>
+                <input class="enter" type="text"  name="player1"   id="player1" style="height: 2vw; margin: 0.5vw -2vw;" value="{{ myteamprofile.player1 }}">
+                <input class="enter" type="text"  name="player1pos" id="" style="height: 2vw; margin: 0.5vw -2vw;" value="{{ myteamprofile.player1pos }}">
+
+              </div>
+
+              <div class="input pos">
+                <label class="enter-text"  >Игрок2:</label>
+                <input class="enter" type="text"  name="player2"    style="height: 2vw; margin: 0.5vw -2vw;" value="{{ myteamprofile.player2 }}">
+                <input class="enter" type="text"  name="player2pos"   style="height: 2vw; margin: 0.5vw -2vw;" value="{{ myteamprofile.player2pos }}">
+
+              </div>
+
+              <div class="input pos">
+                <label class="enter-text"  >Игрок3:</label>
+                <input class="enter" type="text"  name="player3"     style="height: 2vw; margin: 0.5vw -2vw;" value="{{ myteamprofile.player3 }}">
+                <input class="enter" type="text"  name="player3pos"  style="height: 2vw; margin: 0.5vw -2vw;" value="{{ myteamprofile.player3pos }}">
+
+              </div>
+              <div class="input pos">
+                <label class="enter-text"  >Игрок4:</label>
+                <input class="enter" type="text"  name="player4"    style="height: 2vw; margin: 0.5vw -2vw;" value="{{ myteamprofile.player3 }}">
+                <input class="enter" type="text"  name="player4pos"   style="height: 2vw; margin: 0.5vw -2vw;" value="{{ myteamprofile.player3pos }}">
+
+              </div>
+              <div class="input pos">
+                <label class="enter-text" >Игрок5:</label>
+                <input class="enter" type="text"  name="player5"   id="player5" style="height: 2vw; margin: 0.5vw -2vw;" value="{{ myteamprofile.player5 }}">
+                <input class="enter" type="text"  name="player5pos"  style="height: 2vw; margin: 0.5vw -2vw;" value="{{ myteamprofile.player5pos }}">
+
+
+              </div>
+            </div>
+          <button id="edit-profile" class="start" type="submit" name="text-file">Сохранить изменения</button>
+        </form>
+        </main>
+      </div>
+    </main>
+  </section>
+</div>
+</body>
+</html>

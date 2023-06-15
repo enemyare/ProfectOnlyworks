@@ -25,97 +25,74 @@
         </article>
     </div>
     <main class="navigation">
-        <article class="shine-button"><a href="{% url 'team' %}">Команды</a></article>
-        <article class="shine-button"><a href="{% url 'myteam' %}">Моя команда</a></article>
+        <article class="shine-button"><a href="{% url 'team' %}">Игроки</a></article>
+
+        {% if user.is_authenticated %}
+        <article class="shine-button"><a href="{% url 'myteam' request.user.username %}">Моя команда</a></article>
+        <article class="shine-button"><a href="{% url 'profile' request.user.username %}">Портфолио</a><img src="{% static 'main/img/user.png' %}" alt="user-image"></article>
+        <article class="shine-button"><a href="{% url 'logout' %}">Выйти</a></article>
+        {% else %}
         <article class="shine-button"><a href="{% url 'sign' %}">Вход</a></article>
         <article class="shine-button"><a href="{% url 'registration' %}">Регистрация</a></article>
-        <article class="shine-button"><a href="{% url 'profile' %}">Портфолио</a><img src="{% static 'main/img/user.png' %}" alt="user-image"></article>
+        {% endif %}
     </main>
 </nav>
 <div class="entry-block-wrap">
     <section class="entry-block">
         <aside class="links">
-            <h1>Профиль</h1>
+            <h1>Список портфолио игроков</h1>
         </aside>
         <main class="main">
-            <aside class="head">
-                <img src="{% static 'main/img/login.png' %}" alt="user banner">
-                <h1>Логин</h1>
-            </aside>
-            <hr>
-            <div class="block">
-                <aside class="links">
-                    <a href="{% url 'profile' %}">Портфолио</a>
-                    <a href="{% url 'team' %}" class="active">Команды</a>
-                    <a href="{% url 'myteam' %}" >Моя команда</a>
-                </aside>
-                <main class="team">
+            <div>
+                {% for profile in profiles %}
+
+                 <main class="team">
                     <header>
-                        <img src="{% static 'main/img/team.png' %}" alt="team logo">
+                        <img src="{{ profile.avatar.url }}" alt="team logo">
+
                         <div class="team-name">
-                            <p>Название</p>
-                            <h1>Члены команды:</h1>
+                            <p>{{ profile.user  }}</p>
+
                         </div>
                     </header>
-                    <div class="stuff">
-                        <div class="input pos">
-                            <label class="enter-text" for="position1">Ссылка1:</label>
-                            <input class="enter" list="pos1" type="text" id="position1">
-                            <datalist id="pos1">
-                                <option value="1" label="1">
-                                <option value="2" label="2">
-                                <option value="3" label="3">
-                                <option value="4" label="4">
-                                <option value="5" label="5">
-                            </datalist>
+                    <main class="lines">
+                        <div class="left">
+                            <div class="input">
+                                <label class="enter-text" >ФИО:</label>
+                                <p class="enter" style="height: 2vw;margin: 0.5vw 1vw;">{{ profile.surname }} {{ profile.firstname }} {{ profile.patronymic }}</p>
+                            </div>
+                            <div class="input" style="margin: 0;">
+                                <label class="enter-text" for="telegram">Телеграм:</label>
+                                <p class="enter" type="text" id="telegram" style="margin: 0.5vw 2vw;">{{ profile.telegram }}</p>
+                            </div>
+                            <div class="age-pos">
+                                <div class="input age">
+                                    <label class="enter-text" >Возраст:</label>
+                                    <p class="enter" style="height: 2vw;margin: 0.5vw 1vw;">{{ profile.age }}</p>
+                                </div>
+                                <div class="input pos">
+                                    <label class="enter-text"  >Позиция:</label>
+                                    <p class="enterpos" style="margin: 0.5vw 0vw;" >{{ profile.position }}</p>
+                                    <datalist id="pos">
+                                        <option value="1" label="1">
+                                        <option value="2" label="2">
+                                        <option value="3" label="3">
+                                        <option value="4" label="4">
+                                        <option value="5" label="5">
+                                    </datalist>
+                                </div>
+                            </div>
                         </div>
-                        <div class="input pos">
-                            <label class="enter-text" for="position2">Ссылка2:</label>
-                            <input class="enter" list="pos2" type="text" id="position2">
-                            <datalist id="pos2">
-                                <option value="1" label="1">
-                                <option value="2" label="2">
-                                <option value="3" label="3">
-                                <option value="4" label="4">
-                                <option value="5" label="5">
-                            </datalist>
+
+                        <div class="right">
+                            <div class="input">
+                                <label class="enter-text"  >О себе:</label>
+                                <p class="enter" style="height: 18vw; margin: 0.5vw 1vw;">{{ profile.about }}</p>
+                            </div>
                         </div>
-                        <div class="input pos">
-                            <label class="enter-text" for="position3">Ссылка3:</label>
-                            <input class="enter" list="pos3" type="text" id="position3">
-                            <datalist id="pos3">
-                                <option value="1" label="1">
-                                <option value="2" label="2">
-                                <option value="3" label="3">
-                                <option value="4" label="4">
-                                <option value="5" label="5">
-                            </datalist>
-                        </div>
-                        <div class="input pos">
-                            <label class="enter-text" for="position4">Ссылка4:</label>
-                            <input class="enter" list="pos4" type="text" id="position4">
-                            <datalist id="pos4">
-                                <option value="1" label="1">
-                                <option value="2" label="2">
-                                <option value="3" label="3">
-                                <option value="4" label="4">
-                                <option value="5" label="5">
-                            </datalist>
-                        </div>
-                        <div class="input pos">
-                            <label class="enter-text" for="position5">Ссылка5:</label>
-                            <input class="enter" list="pos5" type="text" id="position5">
-                            <datalist id="pos5">
-                                <option value="1" label="1">
-                                <option value="2" label="2">
-                                <option value="3" label="3">
-                                <option value="4" label="4">
-                                <option value="5" label="5">
-                            </datalist>
-                        </div>
-                    </div>
+                    </main>
                 </main>
-                <a href="#" class="new">+ Новая команда</a>
+                {% endfor %}
             </div>
         </main>
     </section>

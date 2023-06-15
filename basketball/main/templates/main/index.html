@@ -25,11 +25,15 @@
         </article>
     </div>
     <main class="navigation">
-        <article class="shine-button"><a href="{% url 'team' %}">Команды</a></article>
-        <article class="shine-button"><a href="{% url 'myteam' %}">Моя команда</a></article>
+        <article class="shine-button"><a href="{% url 'team' %}">Игроки</a></article>
+        {% if user.is_authenticated %}
+        <article class="shine-button"><a href="{% url 'myteam' request.user.username %}">Моя команда</a></article>
+        <article class="shine-button"><a href="{% url 'profile' request.user.username %}">Портфолио</a><img src="{% static 'main/img/user.png' %}" alt="user-image"></article>
+        <article class="shine-button"><a href="{% url 'logout' %}">Выйти</a></article>
+        {% else %}
         <article class="shine-button"><a href="{% url 'sign' %}">Вход</a></article>
         <article class="shine-button"><a href="{% url 'registration' %}">Регистрация</a></article>
-        <article class="shine-button"><a href="{% url 'profile' %}">Портфолио</a><img src="{% static 'main/img/user.png' %}" alt="user-image"></article>
+        {% endif %}
     </main>
 </nav>
 <section class="link">
